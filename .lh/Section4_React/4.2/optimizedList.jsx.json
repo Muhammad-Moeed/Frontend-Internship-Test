@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Section4_React/4.2/optimizedList.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1749569911127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1749569911127,
+            "name": "Commit-0",
+            "content": "import React, { useMemo, useCallback } from 'react';\r\nimport { FixedSizeList as VirtualizedList } from 'react-window';\r\n\r\n// Memoize ExpensiveItem to avoid unnecessary re-renders\r\nconst MemoizedExpensiveItem = React.memo(({ data, index, style }) => {\r\n  const { filteredItems, onItemClick } = data;\r\n  const item = filteredItems[index];\r\n\r\n  // Avoid recalculating unless item changes\r\n  const computed = useMemo(() => heavyCalculation(item), [item]);\r\n\r\n  const handleClick = useCallback(() => onItemClick(item), [item, onItemClick]);\r\n\r\n  return (\r\n    <div style={style}>\r\n      <ExpensiveItem item={item} computed={computed} onClick={handleClick} />\r\n    </div>\r\n  );\r\n});\r\n\r\nconst ItemList = ({ items, onItemClick, filters }) => {\r\n  // Memoize filter results to prevent recalculation on every render\r\n  const filteredItems = useMemo(() => {\r\n    return items.filter(item => matchesFilters(item, filters));\r\n  }, [items, filters]);\r\n\r\n  return (\r\n    <VirtualizedList\r\n      height={600} \r\n      width=\"100%\"\r\n      itemCount={filteredItems.length}\r\n      itemSize={80} // Adjust height per item\r\n      itemData={{ filteredItems, onItemClick }}\r\n    >\r\n      {MemoizedExpensiveItem}\r\n    </VirtualizedList>\r\n  );\r\n};\r\n"
+        }
+    ]
+}

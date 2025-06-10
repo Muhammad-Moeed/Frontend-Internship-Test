@@ -1,0 +1,52 @@
+/* Fallback for IE11 which doesn't support CSS Grid */
+.card-grid {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+}
+
+/* Tablet Layout for IE11 */
+@media (min-width: 600px) {
+    .card-grid {
+        -ms-grid-columns: 1fr 20px 1fr;
+    }
+    
+    .card:nth-child(2n) {
+        -ms-grid-column: 3;
+    }
+    
+    .card:nth-child(2n+1) {
+        -ms-grid-column: 1;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop Layout for IE11 */
+@media (min-width: 900px) {
+    .card-grid {
+        -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    }
+    
+    .card {
+        -ms-grid-column: unset;
+    }
+    
+    /* Need to manually position each card in IE11 */
+    .card:nth-child(4n+1) {
+        -ms-grid-column: 1;
+    }
+    
+    .card:nth-child(4n+2) {
+        -ms-grid-column: 3;
+    }
+    
+    .card:nth-child(4n+3) {
+        -ms-grid-column: 5;
+    }
+    
+    .card:nth-child(4n+4) {
+        -ms-grid-column: 7;
+    }
+}

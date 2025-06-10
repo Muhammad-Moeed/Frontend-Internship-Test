@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Section3_JavaScript/3.3/EventHandling.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1749569973590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1749569973590,
+            "name": "Commit-0",
+            "content": "# Event Handling Puzzle Solution\r\n\r\n## Console Output Order\r\n1. Container clicked\r\n2. Button clicked\r\n3. Button clicked again\r\n\r\n1. *Capture Phase** (Top-down):\r\n   - Events travel from window down to target\r\n   - Listeners with useCapture: true execute here\r\n   - container's listener runs first\r\n\r\n2. **Target Phase**:\r\n   - Event reaches the actual target (button)\r\n   - All target handlers execute in registration order\r\n   - e.stopPropagation() called here\r\n\r\n3. **Bubble Phase** (Bottom-up):\r\n   - Normally would propagate back up\r\n   - Stopped by stopPropagation() in this case\r\n\r\n### Why This Order?\r\ncontainer.addEventListener('click', handler, true);  \r\n// 1. Capture phase (runs first)\r\nbutton.addEventListener('click', handler1);         \r\n// 2. First target handler\r\nbutton.addEventListener('click', handler2);       \r\n// 3. Second target handler"
+        }
+    ]
+}

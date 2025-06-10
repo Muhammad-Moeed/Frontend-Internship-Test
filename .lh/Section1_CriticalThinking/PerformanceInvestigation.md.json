@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Section1_CriticalThinking/PerformanceInvestigation.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1749570027158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1749570034005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n-Bundle Size Reduction**\r\n+# React Performance Optimization\r\n+\r\n+## 🔍 Investigation Approach\r\n+\r\n+### 1 Bundle Size Reduction**\r\n - **Tools Used:**  \r\n   - Webpack Bundle Analyzer  \r\n   - `source-map-explorer`  \r\n - **Causes:**  \r\n"
+                },
+                {
+                    "date": 1749570042065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   - Replaced heavy libraries with lightweight alternatives. \r\n   - Implemented **code splitting** using `React.lazy()` and `Suspense`.  \r\n   - Added **tree shaking** in Webpack.  \r\n \r\n-### 2. **Network Requests Optimization**\r\n+### 2 Network Requests Optimization\r\n - **Tools Used:**  \r\n   - Chrome DevTools (Network Tab)  \r\n   - Lighthouse Audit  \r\n - **Causes:**  \r\n"
+                },
+                {
+                    "date": 1749570048402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   - Merged and minified CSS/JS.  \r\n   - Converted images to **WebP** format.  \r\n   - Added `Cache-Control` headers for assets.  \r\n \r\n-### 3. **Main Thread Blocking**\r\n+### 3 Main Thread Blocking\r\n - **Tools Used:**  \r\n   - Chrome DevTools (Performance Tab)  \r\n   - React DevTools Profiler  \r\n - **Causes:**  \r\n"
+                }
+            ],
+            "date": 1749570027158,
+            "name": "Commit-0",
+            "content": "Bundle Size Reduction**\r\n- **Tools Used:**  \r\n  - Webpack Bundle Analyzer  \r\n  - `source-map-explorer`  \r\n- **Causes:**  \r\n  - Unused dependencies .  \r\n  - No code splitting/lazy loading.  \r\n- **Solutions:**  \r\n  - Replaced heavy libraries with lightweight alternatives. \r\n  - Implemented **code splitting** using `React.lazy()` and `Suspense`.  \r\n  - Added **tree shaking** in Webpack.  \r\n\r\n### 2. **Network Requests Optimization**\r\n- **Tools Used:**  \r\n  - Chrome DevTools (Network Tab)  \r\n  - Lighthouse Audit  \r\n- **Causes:**  \r\n  - Multiple render-blocking CSS/JS files.  \r\n  - Unoptimized images (PNG/JPG instead of WebP).  \r\n  - No caching for static assets.  \r\n- **Solutions:**  \r\n  - Merged and minified CSS/JS.  \r\n  - Converted images to **WebP** format.  \r\n  - Added `Cache-Control` headers for assets.  \r\n\r\n### 3. **Main Thread Blocking**\r\n- **Tools Used:**  \r\n  - Chrome DevTools (Performance Tab)  \r\n  - React DevTools Profiler  \r\n- **Causes:**  \r\n  - Expensive re-renders due to unoptimized hooks.  \r\n  - Long-running synchronous tasks.  \r\n- **Solutions:**  \r\n  - Optimized Optimize expensive operations with `React.memo`, `useMemo`, and `useCallback`.  \r\n  - Deferred non-critical JS using `async/defer`.  \r\n  - Used **Web Workers** for heavy computations.  \r\n\r\n"
+        }
+    ]
+}
