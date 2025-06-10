@@ -1,6 +1,6 @@
 # React Performance Optimization
 
-## 🔍 Investigation Approach
+##  Investigation Approach
 
 ### 1 Bundle Size Reduction**
 - **Tools Used:**  
