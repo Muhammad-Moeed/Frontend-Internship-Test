@@ -1,7 +1,7 @@
 # 🚀 Frontend Developer Entry Test
 
 This repository contains the completed **Frontend Developer Entry Test** covering real-world frontend development scenarios.  
-🕒 **Time Limit:** 2pm to 9pm  
+🕒 **Time Limit:** 4pm to 9pm  
 🧠 **Focus:** Problem Solving · Architecture · Performance · CSS · JavaScript · React
 
 ---
